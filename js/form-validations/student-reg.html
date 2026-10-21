@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.20.0/dist/axios.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.20.0/axios.min.js"></script>
+
+</head>
+
+<body>
+    <form id="studentForm">
+        <span id="error-msg"></span>
+        <br>
+        <label>Full Name</label>
+        <input type="text" minlength="3" maxlength="40" id="name" required>
+<br>
+        <label>Email</label>
+        <input type="email" required id="email">
+<br>
+        <label>Mobile</label>
+        <input type="tel"  required id="mobile">
+<br>
+        <label>Age</label>
+        <input type="number" min="18" max="60" id="age" required>
+<br>
+        <label>Username</label>
+        <input type="text" id="username" required>
+<br>
+        <label>Password</label>
+        <input type="password" id="password" class="form-field bg-dark" minlength="8" required>
+<br>
+        <label>Confirm Password</label>
+        <input type="password" id="confirmPassword" required>
+<br>
+        <label>Website</label>
+        <input type="url" id="website">
+<br>
+        <label>Date of Birth</label>
+        <input type="date" required id="dob">
+<br>
+        <button type="submit">Register</button>
+    </form>
+
+  
+   
+    <script>
+     
+
+const form = document.querySelector("#studentForm");
+
+const nameRegex =new RegExp(/^[A-Za-z ]{3,30}$/)
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const mobileRegex = /^[0-9]{10}$/;
+const usernameRegex = /^[A-Za-z0-9_]{5,15}$/;
+const passwordRegex =/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const mobile = document.querySelector("#mobile");
+  const username = document.querySelector("#username");
+  const password = document.querySelector("#password");
+  const confirmPassword = document.querySelector("#confirmPassword");
+  const dob=document.querySelector("#dob")
+  const website=document.querySelector("#website")
+  const age=document.querySelector("#age")
+
+  let isValid = true;
+  let errorMsg=""
+
+  
+
+  if (!nameRegex.test(name.value.trim())) {
+    name.classList.add("error");
+    isValid = false;
+    errorMsg="Invalid Name"
+  } else {
+    name.classList.remove("error");
+    name.classList.add("success");
+    
+  }
+
+  if (!emailRegex.test(email.value.trim())) {
+    email.classList.add("error");
+    isValid = false;
+    errorMsg="Invalid Email-id"
+  }
+
+  if (!mobileRegex.test(mobile.value.trim())) {
+    mobile.classList.add("error");
+    isValid = false;
+    errorMsg="Invalid Mobile No."
+  }
+
+  if (!usernameRegex.test(username.value.trim())) {
+    username.classList.add("error");
+    isValid = false;
+     errorMsg="Invalid Username"
+  }
+
+  if (!passwordRegex.test(password.value)) {
+    password.classList.add("error");
+    isValid = false;
+    errorMsg="Invalid Password"
+  }
+
+  if (password.value !== confirmPassword.value) {
+    confirmPassword.classList.add("error");
+    isValid = false;
+    errorMsg="Password not matched"
+  }
+
+  if (isValid) {
+    document.querySelector("#error-msg").innerHTML=""
+    axios.post("http://localhost:3000/persons",
+    {
+      name:name.value,
+      age:age.value,
+      email:email.value,
+      password:password.value,
+      website:website.value,
+      mobile:mobile.value,
+      username:username.value
+
+    })
+    alert("Registration successful!");
+  }
+  else
+  {
+    document.querySelector("#error-msg").innerHTML=errorMsg
+  }
+});
+
+    </script>
+</body>
+
+</html>

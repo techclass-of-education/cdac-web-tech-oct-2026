@@ -1,0 +1,268 @@
+<script>
+  
+    const students = [
+  {
+    rollno: 1,
+    name: "Aarav",
+    marks: {
+      maths: 85,
+      science: 78,
+      english: 90,
+      hindi: 82,
+      history: 75
+    }
+  },
+  {
+    rollno: 2,
+    name: "Vivaan",
+    marks: {
+      maths: 72,
+      science: 81,
+      english: 76,
+      hindi: 88,
+      history: 79
+    }
+  },
+  {
+    rollno: 3,
+    name: "Aditya",
+    marks: {
+      maths: 91,
+      science: 85,
+      english: 89,
+      hindi: 84,
+      history: 92
+    }
+  },
+  {
+    rollno: 4,
+    name: "Arjun",
+    marks: {
+      maths: 68,
+      science: 74,
+      english: 80,
+      hindi: 72,
+      history: 77
+    }
+  },
+  {
+    rollno: 5,
+    name: "Kabir",
+    marks: {
+      maths: 88,
+      science: 92,
+      english: 85,
+      hindi: 90,
+      history: 86
+    }
+  },
+  {
+    rollno: 6,
+    name: "Ishaan",
+    marks: {
+      maths: 76,
+      science: 69,
+      english: 82,
+      hindi: 78,
+      history: 71
+    }
+  },
+  {
+    rollno: 7,
+    name: "Rohan",
+    marks: {
+      maths: 95,
+      science: 89,
+      english: 91,
+      hindi: 87,
+      history: 93
+    }
+  },
+  {
+    rollno: 8,
+    name: "Rahul",
+    marks: {
+      maths: 64,
+      science: 72,
+      english: 70,
+      hindi: 75,
+      history: 68
+    }
+  },
+  {
+    rollno: 9,
+    name: "Kunal",
+    marks: {
+      maths: 81,
+      science: 77,
+      english: 84,
+      hindi: 80,
+      history: 79
+    }
+  },
+  {
+    rollno: 10,
+    name: "Sahil",
+    marks: {
+      maths: 73,
+      science: 86,
+      english: 78,
+      hindi: 81,
+      history: 74
+    }
+  },
+  {
+    rollno: 11,
+    name: "Ananya",
+    marks: {
+      maths: 92,
+      science: 95,
+      english: 90,
+      hindi: 94,
+      history: 88
+    }
+  },
+  {
+    rollno: 12,
+    name: "Priya",
+    marks: {
+      maths: 87,
+      science: 83,
+      english: 91,
+      hindi: 89,
+      history: 85
+    }
+  },
+  {
+    rollno: 13,
+    name: "Sneha",
+    marks: {
+      maths: 79,
+      science: 88,
+      english: 86,
+      hindi: 92,
+      history: 81
+    }
+  },
+  {
+    rollno: 14,
+    name: "Pooja",
+    marks: {
+      maths: 71,
+      science: 75,
+      english: 80,
+      hindi: 85,
+      history: 73
+    }
+  },
+  {
+    rollno: 15,
+    name: "Neha",
+    marks: {
+      maths: 89,
+      science: 91,
+      english: 87,
+      hindi: 90,
+      history: 94
+    }
+  },
+  {
+    rollno: 16,
+    name: "Simran",
+    marks: {
+      maths: 83,
+      science: 79,
+      english: 85,
+      hindi: 88,
+      history: 82
+    }
+  },
+  {
+    rollno: 17,
+    name: "Aditi",
+    marks: {
+      maths: 96,
+      science: 93,
+      english: 95,
+      hindi: 91,
+      history: 90
+    }
+  },
+  {
+    rollno: 18,
+    name: "Kavya",
+    marks: {
+      maths: 74,
+      science: 82,
+      english: 79,
+      hindi: 86,
+      history: 77
+    }
+  },
+  {
+    rollno: 19,
+    name: "Meera",
+    marks: {
+      maths: 86,
+      science: 84,
+      english: 92,
+      hindi: 87,
+      history: 89
+    }
+  },
+  {
+    rollno: 20,
+    name: "Riya",
+    marks: {
+      maths: 78,
+      science: 80,
+      english: 83,
+      hindi: 85,
+      history: 76
+    }
+  }
+];
+   console.log(students)
+
+  const marksheet=students.map(function (e) {
+        const total = e.marks.english + e.marks.maths + e.marks.hindi + e.marks.history + e.marks.science
+        const avg = total / 5.0
+        let grade
+        if (avg >= 90) {
+            grade = "A"
+        }
+        else if(avg>=70)
+        {
+            grade = "B"
+            
+        }
+        else if(avg>=50)
+        {
+            grade = "C"
+            
+        }
+        else if(avg>=40)
+        {
+            grade = "D"
+            
+        }
+        else
+        {
+            grade="F"
+        }
+        
+        e.total=total
+        e.average=avg
+        e.grade=grade
+
+        return e
+   })
+
+
+//    mutable  vs im-mutable
+
+
+
+
+
+</script>

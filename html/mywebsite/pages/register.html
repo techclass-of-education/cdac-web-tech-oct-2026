@@ -1,0 +1,105 @@
+<a href="../index.html">Index</a>
+<a href="../assets/images/naruto.jpg">Naruto</a>
+<a href="about.html" target="_blank">About</a>
+<a href="contact.html">Contact</a>
+<a href="service.html">Service</a>
+<a href="login.html">Login</a>
+<a href="register.html">Register</a>
+
+
+
+<!-- <form action="/register" method="post" autocomplete="off" target="_blank" enctype="multipart/form-data"> -->
+
+<form>
+    <h1>Register here</h1>
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" autocomplete="off" readonly list="names" name="name"  required value="" placeholder="Name">
+    </div>
+
+    <datalist id="names">
+        <option value="Rahul">
+        <option value="manish">
+        <option value="Vijay">
+        <option value="Sonu">
+        <option value="Monu">
+        <option value="Umesh">
+        <option value="Deepak">
+    </datalist>
+
+    <div>
+        <label for="dob">Date of Birth</label>
+        <input type="datetime-local" id="dob" disabled name="dob">
+        <input type="date" id="dob" value="2025-01-01" name="dob" min="2025-01-01" max="2026-12-31">
+        <input type="week" id="dob" name="dob">
+        <input type="month" id="dob" name="dob">
+    </div>
+
+    <div>
+        <label for="username">Enter your Username:</label>
+        <input required type="email" id="email" name="email">
+    </div>
+
+    <div>
+        <label for="employees">No of Employees</label>
+        <input type="number" min="1" max="100" step="10" placeholder="Enter number of employees">
+    </div>
+
+    <div>
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+            <option value="o">Other</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="hobby">Gender</label>
+        <select id="hobby" name="hobby" size="5" multiple required>
+            <option value="cricket">Cricket</option>
+            <option value="hockey">Hockey</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+            <option value="polo">Polo</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="citizen">Citizenship</label>
+
+        <label for="indian">Indian :</label>  
+        <input type="radio" id="indian" name="citizen" value="indian">
+
+
+        <label for="non-indian">Non Indian :</label>     
+        <input type="radio" id="non-indian" name="citizen" value="non-indian">
+    </div>
+
+
+    <div>
+        <label for="subjects">Subjects</label>
+
+        <label for="java">Java :</label>  
+        <input type="checkbox" id="java" name="subjects" value="java">
+
+        <label for="c">C Language:</label>  
+        <input type="checkbox" id="c" name="subjects" value="C Language">
+    </div>
+
+
+
+    <div>
+        <label for="password">Enter your Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+
+    <button type="submit">Register</button>
+
+</form>

@@ -1,0 +1,50 @@
+{
+  "persons": [
+    {
+      "name": "Kavita",
+      "age": 25,
+      "mobile": "4575937593",
+      "city": "Nagpur",
+      "id": "LQIn0fOKf7E"
+    },
+    {
+      "name": "Esha",
+      "age": 23,
+      "mobile": "2342342342",
+      "email": "e@gmail.com",
+      "id": "qMBHA9yrmY4"
+    },
+    {
+      "name": "Trish",
+      "age": 25,
+      "mobile": "7742342342",
+      "email": "t@gmail.com",
+      "id": "6zv6b0t7Mfw"
+    },
+    {
+      "name": "Uemsh",
+      "age": 35,
+      "mobile": "5542342342",
+      "email": "umesh@gmail.com",
+      "id": "1uNMMo8SnQU"
+    },
+    {
+      "name": "Naresh",
+      "age": 38,
+      "mobile": "8842342342",
+      "email": "n@gmail.com",
+      "id": "Kf4GnDufo2o"
+    },
+    {
+      "name": "CDAC SPIPL",
+      "age": "18",
+      "email": "cdacspipl@gmail.com",
+      "password": "Abcd@123",
+      "website": "http://www.google.com",
+      "mobile": "9988776655",
+      "username": "admin",
+      "id": "i0TDiAx2d08"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

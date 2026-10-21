@@ -1,0 +1,53 @@
+<input type="number" id="n1"  placeholder="enter a number">
+<input type="number" id="n2" placeholder="enter a number">
+
+<button onclick="addition()">Add</button>
+<button onclick="substract()">Substact</button>
+<button onclick="powerVal()">Power</button>
+
+<p id="output"></p>
+
+<script>
+
+    const powerVal=()=>
+    {
+        let n1=parseInt(document.getElementById("n1").value)
+        let n2=parseInt(document.getElementById("n2").value)
+
+        document.getElementById("output").innerHTML=n1**n2
+    }
+
+    const addition=()=>
+    {
+        let t1=document.getElementById("n1")
+        let t2=document.getElementById("n2")
+
+        let n1=parseInt(t1.value)
+        let n2=parseInt(t2.value)
+
+        let add=n1+n2
+
+        let p=document.getElementById("output")
+        p.innerHTML=add
+
+    }
+
+  
+    const substract=()=>
+    {
+        let t1=document.getElementById("n1")
+        let t2=document.getElementById("n2")
+
+        let n1=parseInt(t1.value)
+        let n2=parseInt(t2.value)
+
+        let sub=n1-n2
+
+        let p=document.getElementById("output")
+        p.innerHTML=sub
+
+    }
+
+
+
+</script>

@@ -1,0 +1,39 @@
+<script>
+    //  ...
+    let arr = [10, 20, 40, 50, 70]
+
+    // const newArr=[]
+
+    // arr.forEach(function(e){
+    //     newArr.push(e)
+    // })
+
+    // let arr1 = [...arr]
+
+    // arr1[0] = 100
+
+    // console.log(arr)
+    // console.log(arr1)
+
+
+    // rest operator ...
+
+    function add(...numbers) {
+        // console.log(numbers)
+        let sum=0
+        for(v of numbers)
+        {
+            sum+=v
+        }
+
+        console.log(sum)
+
+    }
+
+    add()
+    add(20,30)
+    add(20,30,60,49)
+    add(20,30,60,49,78,70)
+
+
+</script>

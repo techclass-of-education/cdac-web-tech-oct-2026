@@ -1,0 +1,46 @@
+<script>
+      // 100-90 A
+    // 89-70 B
+    // 69-50 C
+    // 49-40 D
+    // F
+    const students = [
+        {}
+    ];
+
+    const marksheet=students.map(function (e) {
+        const total = e.english + e.maths + e.hindi + e.history + e.science
+        const avg = total / 5.0
+        let grade
+        if (avg >= 90) {
+            grade = "A"
+        }
+        else if(avg>=70)
+        {
+            grade = "B"
+            
+        }
+        else if(avg>=50)
+        {
+            grade = "C"
+            
+        }
+        else if(avg>=40)
+        {
+            grade = "D"
+            
+        }
+        else
+        {
+            grade="F"
+        }
+        
+        e.total=total
+        e.average=avg
+        e.grade=grade
+
+        return e
+   })
+
+   console.log(marksheet)
+</script>

@@ -1,0 +1,16 @@
+<p id="para">Hello this is a paragraph</p>
+<button type="button" onclick="changeText()">Change Text</button>
+
+
+<script>
+    function changeText() {
+        let p = window.document.getElementById("para")
+
+        // p.textContent="Bye now this a new text"
+        p.innerHTML = "Bye now this a new text"
+        // p.innerText="Bye now this a new text"
+    }
+
+    
+  
+</script>

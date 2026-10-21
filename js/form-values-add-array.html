@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <form onsubmit="addRow(event)">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" required id="name" placeholder="Enter name">
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" required min="1" max="150" id="age" placeholder="Enter age">
+            </div>
+            <div>
+                <label for="mobile">Mobile no.</label>
+                <input type="tel" required id="mobile" placeholder="Enter mobile" maxlength="10">
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Mobile no</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+            <tbody id="data-rows">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // array of objects
+
+        
+
+
+        let i=1
+        function addRow(event) {
+            event.preventDefault()
+            let values = []
+            const name = document.querySelector("#name").value
+            const age = document.querySelector("#age").value
+            const mobile = document.querySelector("#mobile").value
+
+            values.push(name)
+            values.push(age)
+            values.push(mobile)
+
+            const tbody = document.querySelector("#data-rows")
+            
+            let tr=document.createElement("tr")
+
+            let tdSn=document.createElement("td")
+            let tdName=document.createElement("td")
+            let tdAge=document.createElement("td")
+            let tdMobile=document.createElement("td")
+
+            let tdActions=document.createElement("td")
+
+            let btnEdit=document.createElement("button")
+            btnEdit.textContent="Edit"
+            // btnEdit.type="button"
+            btnEdit.onclick= function()
+            {
+                alert("Edit function")
+            }
+
+            let btnDelete=document.createElement("button")
+            btnDelete.textContent="Delete"
+
+            btnDelete.onclick=function()
+            {
+               this.parentElement.parentElement.remove()
+            }
+
+            // btnEdit.type="button"
+
+            tdSn.textContent=i
+            tdName.textContent=values[0]
+            tdAge.textContent=values[1]
+            tdMobile.textContent=values[2]
+            tdActions.appendChild(btnEdit)
+            tdActions.appendChild(btnDelete)
+            
+            tr.appendChild(tdSn)
+            tr.appendChild(tdName)
+            tr.appendChild(tdAge)
+            tr.appendChild(tdMobile)
+            tr.appendChild(tdActions)
+            // tr.innerHTML="<tr><td>" + values[0] + "</td><td>" + values[1] + "</td><td>" + values[2] + "</td></tr>"
+            tbody.appendChild(tr)
+            i++
+
+        }
+
+    </script>
+</body>
+
+</html>
