@@ -8,6 +8,9 @@ import { Contact } from './pages/Contact.jsx'
 import {Register} from "./pages/Register.jsx"
 import { Navbar } from './layout/Navbar.jsx'
 import { About } from './pages/About.jsx'
+import {AddIncident} from "./pages/AddIncident.jsx"
+import { IncidentsList } from './pages/IncidentsList.jsx'
+import { IncidentDetails } from './pages/IncidentDetails.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +26,12 @@ createRoot(document.getElementById('root')).render(
           <Route path="/login" element={<Login/>}/>
 
           <Route path="/register" element={<Register/>}/>
+
+          <Route path="/add" element={<AddIncident/>}/>
+
+          <Route path="/list" element={<IncidentsList/>}/>
+
+          <Route path="/details" element={<IncidentDetails/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,

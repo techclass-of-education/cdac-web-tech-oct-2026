@@ -21,5 +21,6 @@ return(<>
         <Link to="/contact" className="menu-item">Contact</Link>
         <Link to="/login" className="menu-item">Login</Link>
         <Link to="/register" className="menu-item">Register</Link>
+        <Link to="/add" className="menu-item">Add Incident</Link>
     </>)
 }
