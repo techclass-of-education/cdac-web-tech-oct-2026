@@ -16,11 +16,30 @@ export function Navbar()
 
 
 return(<> 
-        <Link to="/" className="menu-item">Home</Link>
+        {/* <Link to="/" className="menu-item">Home</Link>
         <Link to="/about" className="menu-item">About</Link>
         <Link to="/contact" className="menu-item">Contact</Link>
         <Link to="/login" className="menu-item">Login</Link>
         <Link to="/register" className="menu-item">Register</Link>
-        <Link to="/add" className="menu-item">Add Incident</Link>
+        <Link to="/add" className="menu-item">Add Incident</Link> */}
+
+        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+  <div className="container-fluid">
+    <Link className="navbar-brand" to="/">Home</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <Link className="nav-link active" aria-current="page" to="/about">About</Link>
+        <Link className="nav-link" to="/contact">Contact</Link>
+        <Link className="nav-link" to="/add">Add Incident</Link>
+        <Link className="nav-link" to="/login">Login</Link>
+        <Link className="nav-link" to="/register">Register</Link>
+        
+      </div>
+    </div>
+  </div>
+</nav>
     </>)
 }
