@@ -11,8 +11,6 @@ export function ListAccordian(props)
 
             return (
             <li>
-               
-              
                   <span>{incidents._id}</span> 
                   <span>{incidents.title}</span> 
                   <span>{incidents.user}</span>
