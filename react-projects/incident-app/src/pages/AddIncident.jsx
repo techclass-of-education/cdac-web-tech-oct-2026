@@ -64,10 +64,10 @@ useEffect(function(){
             value={category}
             onChange={function (event) {
               setCategory(event.target.value);
-            }}
+              }}
           >
             <option value>Select Category</option>
-            <option value="phising">Phising</option>
+            <option selected value="phising">Phising</option>
             <option value="malware">Malware</option>
             <option value="db_error">DB Error</option>
             <option value="server_error">Server Error</option>
