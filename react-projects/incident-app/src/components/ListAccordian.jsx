@@ -1,6 +1,6 @@
-export function ListAccordian(props)
+export function ListAccordian({mockIncidents})
 {
-    const {mockIncidents}=props
+    
     return(
 
         <ul>
