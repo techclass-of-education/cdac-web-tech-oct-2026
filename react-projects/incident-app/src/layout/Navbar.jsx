@@ -34,8 +34,8 @@ return(<>
         <Link className="nav-link active" aria-current="page" to="/about">About</Link>
         <Link className="nav-link" to="/contact">Contact</Link>
         <Link className="nav-link" to="/add">Add Incident</Link>
-        <Link className="nav-link" to="/login">Login</Link>
-        <Link className="nav-link" to="/register">Register</Link>
+        <Link className="nav-link" to="/user-forms">Login/Register</Link>
+        {/* <Link className="nav-link" to="/register">Register</Link> */}
         
       </div>
     </div>

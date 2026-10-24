@@ -30,3 +30,34 @@ export function TextField({pHolder,
                     />
     </>)
 }
+
+
+export function SelectField({
+            stateFunction,
+            statevar,
+            selectId,
+            optionData})
+{
+    return(    <select
+            id={selectId}
+            className="form-select form-select-sm"
+            value={statevar}
+            onChange={function (event) {
+              stateFunction(event.target.value);
+              }}
+          >
+            {
+                optionData.map((e)=><option value={e.value}>
+                                    {e.text}
+                                    </option>)
+            }
+          </select>)
+}
+
+
+export function ButtonField({isDisable,text,color})
+{
+    return(
+        <button disabled={isDisable}  className={`btn btn-${color}`}>{text}</button>
+    )
+}

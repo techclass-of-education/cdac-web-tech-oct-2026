@@ -1,5 +1,5 @@
 import { useState,useRef, useEffect,useCallback, useMemo } from "react";
-import { TextField } from "../components/FormElements";
+import { ButtonField, TextField } from "../components/FormElements";
 import { TextAreaField } from "../components/FormElements";
 
 export function Contact()
@@ -41,6 +41,7 @@ export function Contact()
             if(name && mobile && email && msg)
             {
                     setAccept(!accept)
+                    setSendBtnDisabled(false)
             }
             else
             {
@@ -80,15 +81,7 @@ export function Contact()
                         refVar={mobileRef}
                         />
 
-                    {/* <input className="form-control form-control-sm"
-                        value={mobile}
-                        ref={mobileRef}
-                        onChange={function (event) {
-                               setMobile(event.target.value);
-                        }}
-                        placeholder="Enter Mobile"
-                        
-                    /> */}
+                   
                 </div>
                 <div className="mb-3">
                      <TextField 
@@ -97,30 +90,14 @@ export function Contact()
                         stateVar={email}
                         refVar={emailRef}
                         />
-                    {/* <input className="form-control form-control-sm"
-                        value={email}
-                        ref={emailRef}
-                        onChange={function (event) {
-                        setEmail(event.target.value);
-                        }}
-                        placeholder="Enter Email-Id"
-                        
-                    /> */}
+                  
                 </div>
                 <div className="mb-3">
                     <TextAreaField  pHolder="Enter Message/Suggesion"
                         stateFunction={setMsg}
                         stateVar={msg}
                         refVar={msgRef}/>
-                    {/* <textarea className="form-control form-control-sm"
-                      ref={msgRef}
-                      defaultValue={msg}
-                        onChange={function (event) {
-                        setMsg(event.target.value);
-                        }}
-                        placeholder="Enter Message/Suggesion"
-                        
-                    ></textarea> */}
+                 
                 </div>
                 <div className="form-check mb-3">
                     <input checked={accept} onClick={handleAccept} 
@@ -129,7 +106,8 @@ export function Contact()
                         I accept
                     </label>
                 </div>         
-                <button disabled={sendBtnDisabled}  className="btn btn-danger">Send</button>
+                <ButtonField isDisable={sendBtnDisabled} text={"Send"} color="danger"/>
+                {/* <button disabled={sendBtnDisabled}  className={`btn btn-${}`}>Send</button> */}
 
             </div>
     </form>

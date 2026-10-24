@@ -11,6 +11,7 @@ import { About } from './pages/About.jsx'
 import {AddIncident} from "./pages/AddIncident.jsx"
 import { IncidentsList } from './pages/IncidentsList.jsx'
 import { IncidentDetails } from './pages/IncidentDetails.jsx'
+import { UserAuthForms } from './pages/UserAuthForms.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -32,6 +33,8 @@ createRoot(document.getElementById('root')).render(
           <Route path="/list" element={<IncidentsList/>}/>
 
           <Route path="/details" element={<IncidentDetails/>}/>
+
+          <Route path="/user-forms" element={<UserAuthForms/>}/>
       </Routes>
     </BrowserRouter>
   </StrictMode>,

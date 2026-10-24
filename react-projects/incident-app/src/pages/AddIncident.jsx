@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ButtonField, SelectField } from "../components/FormElements";
 
 export function AddIncident() {
   const [title, setTitle] = useState("");
@@ -58,53 +59,57 @@ useEffect(function(){
 
         <div className="mb-3">
           {/* <label htmlFor="categoary" className="form-label form-label-sm">Category</label> */}
-          <select
-            id="category"
-            className="form-select form-select-sm"
-            value={category}
-            onChange={function (event) {
-              setCategory(event.target.value);
-              }}
-          >
-            <option value>Select Category</option>
-            <option selected value="phising">Phising</option>
-            <option value="malware">Malware</option>
-            <option value="db_error">DB Error</option>
-            <option value="server_error">Server Error</option>
-          </select>
+
+          <SelectField
+          stateFunction={setCategory}
+          statevar={category}
+          selectId={"category"}
+          optionData={[
+            {value:"",text:"Select Category"},
+            {value:"phising",text:"Phising"},
+            {value:"malware",text:"Malware"},
+            {value:"db_error",text:"DB Error"},
+            {value:"server_error",text:"Server Error"},
+          ]
+        }
+          />
+
+
+        
         </div>
         <div className="mb-3">
           {/* <label htmlFor="severity" className="form-label form-label-sm">Severity</label> */}
-          <select
-            id="severity"
-            className="form-select form-select-sm"
-            value={severity}
-            onChange={function (event) {
-              setSeverity(event.target.value);
-            }}
-          >
-            <option value>Select Severity</option>
-            <option value="high">High</option>
-            <option value="critical">Critical</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-          </select>
+            <SelectField
+             stateFunction={setSeverity}
+              statevar={severity}
+              selectId={"severity"}
+              optionData={[
+                {value:"",text:"Select severity"},
+                {value:"high",text:"High"},
+                {value:"critical",text:"Critical"},
+                {value:"medium",text:"Medium"},
+                {value:"low",text:"Low"},
+              ]
+        }
+          />
+         
         </div>
         <div className="mb-3">
           {/* <label htmlFor="status" className="form-label form-label-sm">Status</label> */}
-          <select
-            id="status"
-            className="form-select form-select-sm"
-            value={status}
-            onChange={function (event) {
-              setStatus(event.target.value);
-            }}
-          >
-            <option value>Select Status</option>
-            <option value="open">Open</option>
-            <option value="investigating">Investigating</option>
-            <option value="resolved">Resolved</option>
-          </select>
+
+           <SelectField
+          stateFunction={setStatus}
+          statevar={status}
+          selectId={"status"}
+          optionData={[
+            {value:"",text:"Select Status"},
+            {value:"open",text:"Open"},
+            {value:"investigating",text:"Investigating"},
+            {value:"resolved",text:"Resolved"},
+          ]
+        }
+          />
+       
         </div>
         <div className="mb-3">
           {/* <label htmlFor="description" className="form-label form-label-sm">Description</label> */}
@@ -118,8 +123,8 @@ useEffect(function(){
             placeholder="Enter Description"
           ></textarea>
         </div>
-
-        <button className="btn btn-success">Add</button>
+<ButtonField color={"success"} text={"Add"} isDisable={false}/>
+        {/* <button className="btn btn-success">Add</button> */}
       </form>
     </div>
   );
