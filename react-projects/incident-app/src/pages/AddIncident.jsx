@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ButtonField, SelectField } from "../components/FormElements";
 
 export function AddIncident() {
-  const [title, setTitle] = useState("");
+  const [incidentTitle, setIncidentTitle] = useState("");
   const [category, setCategory] = useState("");
   const [severity, setSeverity] = useState("");
   const [status, setStatus] = useState("");
@@ -17,7 +17,7 @@ export function AddIncident() {
     const data = {
       _id: "#INC" + Date.now(),
       user: "user001",
-      title,
+      incidentTitle,
       category,
       status,
       severity,
@@ -30,7 +30,7 @@ export function AddIncident() {
   }
 
 useEffect(function(){
-  if(formValues.title)
+  if(formValues.incidentTitle)
   {
     console.log(formValues)
     console.log("useEffect Run")
@@ -48,9 +48,9 @@ useEffect(function(){
         <div className="mb-3">
           {/* <label htmlFor="title" className="form-label form-label-sm">Title</label> */}
           <input className="form-control form-control-sm"
-            value={title}
+            value={incidentTitle}
             onChange={function (event) {
-              setTitle(event.target.value);
+              setIncidentTitle(event.target.value);
             }}
             placeholder="Enter Title"
             id="title"

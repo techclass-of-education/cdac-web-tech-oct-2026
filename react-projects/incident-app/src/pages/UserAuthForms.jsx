@@ -2,18 +2,8 @@ import { useState } from "react"
 import { Login } from "./Login"
 import { Register } from "./Register"
 
-export function UserAuthForms({})
+export function UserAuthForms()
 {
-
-
-    // if(isLogin)
-    // {
-    //     return(<Login/>)
-    // }
-    // else
-    // {
-    //     return(<Register/>)
-    // }
 
 
     const [isLogin,setIsLogin]=useState(true)

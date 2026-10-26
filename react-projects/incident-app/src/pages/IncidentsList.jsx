@@ -9,6 +9,8 @@ export function IncidentsList()
 
     <h1 className="text-center">List</h1>
     <hr/>
+
     <ListAccordian mockIncidents={mockIncidents}/>
+    
     </div>)
 }
