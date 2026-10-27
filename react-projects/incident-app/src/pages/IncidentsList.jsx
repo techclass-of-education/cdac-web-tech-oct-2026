@@ -1,6 +1,9 @@
 import { useLocation } from "react-router-dom"
 import { mockIncidents } from "../data/incidents"
 import { ListAccordian } from "../components/ListAccordian"
+import { createContext } from "react"
+export const IncidentsListContext=createContext()
+
 export function IncidentsList()
 {
     const formValues=useLocation().state
@@ -9,8 +12,9 @@ export function IncidentsList()
 
     <h1 className="text-center">List</h1>
     <hr/>
-
-    <ListAccordian mockIncidents={mockIncidents}/>
+        <IncidentsListContext.Provider value={mockIncidents}>
+            <ListAccordian />
+        </IncidentsListContext.Provider>
     
     </div>)
 }

@@ -12,6 +12,7 @@ import { Home } from "./pages/Home";
 import { useState } from "react";
 
 import { createContext } from "react";
+import { CalculatorReducer } from "./pages/reducer/CalculatorReducer";
 
 export const TitleContext=createContext()
 export function App()
@@ -41,6 +42,8 @@ export function App()
                   <Route path="/details" element={<IncidentDetails />}/>
 
                   <Route path="/user-forms" element={<UserAuthForms />}/>
+
+                  <Route path="/reducer-calc" element={<CalculatorReducer />}/>
               </Routes>
             </BrowserRouter>
      

@@ -35,6 +35,7 @@ return(<>
         <Link className="nav-link" to="/contact">Contact</Link>
         <Link className="nav-link" to="/add">Add Incident</Link>
         <Link className="nav-link" to="/user-forms">Login/Register</Link>
+        <Link className="nav-link" to="/reducer-calc">Reducer Calculator</Link>
         {/* <Link className="nav-link" to="/register">Register</Link> */}
         
       </div>
