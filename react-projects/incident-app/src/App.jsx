@@ -12,14 +12,14 @@ import { useState } from "react";
 import { Provider } from "react-redux";
 import { createContext } from "react";
 import { CalculatorReducer } from "./pages/reducer/CalculatorReducer";
-import { authStore } from "./pages/redux/AuthStore";
+import { store } from "./pages/redux/ReduxStore";
 
 export const TitleContext = createContext();
 export function App() {
   const [title, setTitle] = useState("Home");
   return (
     <TitleContext.Provider value={{ setTitle, title }}>
-      <Provider store={authStore}>
+      <Provider store={store}>
         <BrowserRouter>
           <title>{title}</title>
           <Navbar />
